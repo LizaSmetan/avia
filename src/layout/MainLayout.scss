@@ -1,0 +1,36 @@
+.layout {
+    padding: 4.16rem 1rem;
+    max-width: calc(64.5rem + 2rem);
+    width: 100%;
+    margin: 0 auto;
+
+    &__logo{
+        margin-bottom: 4.16rem;
+        text-align: center;
+
+        a{
+            position: relative;
+            display: inline-block;
+
+            &::before{
+                content: '';
+                position: absolute;
+                box-shadow: 0 0.66rem 0.91rem rgb(55 104 142 / 25%), 0 1px 0.91rem rgba(55 104 142 / 30%);
+                border-radius: 50%;
+                inset: 0.16rem;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover::before{
+                transition: all .2s linear;
+                box-shadow: 0 0.416rem 0.416rem rgb(55 104 142 / 25%), 0 1px 0.416rem rgba(55 104 142 / 30%);
+            }
+        }
+
+        img{
+            width: 5rem;
+            height: auto;
+            display: block;
+        }
+    }
+}

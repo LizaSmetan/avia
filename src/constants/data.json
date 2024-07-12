@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "price": {
+            "amount": 13300,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-10-07 10:45:00",
+                "arrival": "2024-11-07 08:00:00",
+                "transfers": ["HKG"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-11-07 11:20:00",
+                "arrival": "2024-12-07 00:05:00",
+                "transfers": ["HKG"]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "price": {
+            "amount": 12000,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-09-15 09:30:00",
+                "arrival": "2024-10-15 18:45:00",
+                "transfers": ["CDG"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-10-16 08:00:00",
+                "arrival": "2024-11-16 21:20:00",
+                "transfers": ["CDG"]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "price": {
+            "amount": 13000,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-07-25 10:00:00",
+                "arrival": "2024-08-25 18:30:00",
+                "transfers": ["CDG", "AMS"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-08-26 08:15:00",
+                "arrival": "2024-09-26 16:45:00",
+                "transfers": ["CDG", "AMS"]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "price": {
+            "amount": 14500,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-09-15 12:30:00",
+                "arrival": "2024-10-15 21:00:00",
+                "transfers": ["HKG", "SIN", "BKK"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-10-16 10:45:00",
+                "arrival": "2024-11-16 19:15:00",
+                "transfers": ["HKG", "SIN", "BKK"]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "price": {
+            "amount": 11200,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-08-10 14:15:00",
+                "arrival": "2024-09-10 22:45:00",
+                "transfers": []
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-09-11 07:30:00",
+                "arrival": "2024-10-11 16:00:00",
+                "transfers": []
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "price": {
+            "amount": 11500,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-08-05 08:15:00",
+                "arrival": "2024-09-05 16:45:00",
+                "transfers": ["AMS", "FRA", "IST"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-09-06 06:30:00",
+                "arrival": "2024-10-06 15:00:00",
+                "transfers": ["AMS", "FRA", "IST"]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "price": {
+            "amount": 9500,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-08-25 13:10:00",
+                "arrival": "2024-09-25 04:30:00",
+                "transfers": ["DXB"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-09-26 10:00:00",
+                "arrival": "2024-10-26 19:15:00",
+                "transfers": ["DXB"]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "price": {
+            "amount": 15000,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-07-20 08:30:00",
+                "arrival": "2024-08-20 17:15:00",
+                "transfers": ["IST"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-08-21 06:00:00",
+                "arrival": "2024-09-21 14:45:00",
+                "transfers": ["IST"]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "price": {
+            "amount": 11000,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-10-01 12:00:00",
+                "arrival": "2024-11-01 21:30:00",
+                "transfers": ["AMS"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-11-02 08:15:00",
+                "arrival": "2024-12-02 17:45:00",
+                "transfers": ["AMS"]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "price": {
+            "amount": 12500,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-07-15 11:00:00",
+                "arrival": "2024-08-15 19:30:00",
+                "transfers": ["CDG", "AMS"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-08-16 07:45:00",
+                "arrival": "2024-09-16 16:00:00",
+                "transfers": ["CDG", "AMS"]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "price": {
+            "amount": 14000,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-09-20 14:00:00",
+                "arrival": "2024-10-20 23:45:00",
+                "transfers": ["HKG", "SIN"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-10-21 09:30:00",
+                "arrival": "2024-11-21 18:15:00",
+                "transfers": ["HKG", "SIN"]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "price": {
+            "amount": 9800,
+            "currency": "$"
+        },
+        "company": "a4e",
+        "way": [
+            {
+                "from": "LHR",
+                "to": "DXB",
+                "departure": "2024-09-10 14:45:00",
+                "arrival": "2024-10-10 23:30:00",
+                "transfers": ["CDG"]
+            },
+            {
+                "from": "DXB",
+                "to": "LHR",
+                "departure": "2024-10-11 10:00:00",
+                "arrival": "2024-11-11 19:15:00",
+                "transfers": ["CDG"]
+            }
+        ]
+    }
+]

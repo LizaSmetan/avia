@@ -1,0 +1,53 @@
+.checkbox{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+
+    &_content{
+        display: flex;
+        align-items: center;
+
+        &__label{
+            display: flex;
+            align-items: center;
+            width: 1.66rem;
+            height: 1.66rem;
+            border: 1px solid #9ABBCE;
+            margin-right: 0.83rem;
+            border-radius: 0.16rem;
+            
+            &--checked{
+                border: 1px solid #2196F3;
+            }
+
+            &_icon{
+                width: 0;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                transition: all .2s ease-in-out;
+                padding: 0 calc((1.66rem - 1rem) / 2);
+                transform: translateY(0.41rem);
+
+                svg{
+                    width: 1rem;
+                    height: 0.66rem;
+                    fill: #2196F3
+                }
+
+                &--checked{
+                    width: 1.66rem;
+                    transform: translateY(0);
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+
+        &__title{
+            color: #4A4A4A;
+            font-size: 1.08rem;
+        }
+    }
+}

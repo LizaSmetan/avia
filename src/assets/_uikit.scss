@@ -1,0 +1,17 @@
+@mixin panel {
+    background: var(--white-color);
+    box-shadow: 0 0.16rem 0.66rem rgb(0 0 0 / 10%);
+    border-radius: 0.416rem;
+}
+
+@mixin desktop {
+    @media (width > 760.66rem) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (width <= 760.66rem) {
+        @content;
+    }
+}

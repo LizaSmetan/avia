@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+
+    &__filter{
+        width: calc(30% + 3.33rem);
+        padding-right: 3.33rem;
+    }
+
+    &__content{
+        width: 70%;
+    }
+}

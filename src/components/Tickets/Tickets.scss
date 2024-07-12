@@ -1,0 +1,13 @@
+@use '../../assets/uikit' as *;
+
+.tickets{
+    .ticket-item{
+        @include panel;
+
+        padding: 1.66rem 2.08rem 1.66rem 1.66rem;
+
+        &+.ticket-item{
+            margin-top: 1.83rem;
+        }
+    }
+}

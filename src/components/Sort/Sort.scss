@@ -1,0 +1,56 @@
+.sort {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #DFE5EC;
+    border-radius: 0.41rem;
+    margin-bottom: 1.5rem;
+
+    &__active_bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transition: all .2s ease-in-out;
+        z-index: -1;
+        background-color: #2196F3;
+    }
+
+    &__button{
+        background: transparent;
+        color: #4A4A4A;
+        transition: all .2s ease-in-out;
+        border: none;
+        display: flex;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover{
+            color: #A0B0B9;
+        }
+
+        &--active{
+            color: white !important;
+        }
+
+        &_inner{
+            flex-grow: 1;
+            font-size: 1rem;
+            padding: 1.25rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        &+&{
+            &::before{
+                content: '';
+                display: block;
+                position: relative;
+                z-index: -2;
+                width: 1px;
+                height: 100%;
+                background-color: #DFE5EC;
+            }
+        }
+    }
+}
