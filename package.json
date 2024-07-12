@@ -2,7 +2,10 @@
     "name": "avia",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://LizaSmetan.github.io/avia",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "lint:js": "eslint **/*.tsx --fix",
         "lint:css": "stylelint **/*.scss",
         "start": "react-scripts start",
@@ -22,6 +25,7 @@
         "@typescript-eslint/eslint-plugin": "^7.15.0",
         "@typescript-eslint/parser": "^7.15.0",
         "eslint": "^8.57.0",
+        "gh-pages": "^6.1.1",
         "moment": "^2.30.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
