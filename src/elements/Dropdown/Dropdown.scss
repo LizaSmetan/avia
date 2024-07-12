@@ -55,6 +55,8 @@
             outline: none;
             text-align: left;
             letter-spacing: 0.5px;
+            color: var(--grey-dark-color);
+            font-size: 1.08rem;
 
             &+&{
                 margin-top: 1rem;

@@ -43,8 +43,10 @@ export const useFixedFilter = () => {
 
             func();
             window.addEventListener('scroll', func);
+            window.addEventListener('resize', func);
             return () => {
                 window.removeEventListener('scroll', func);
+                window.removeEventListener('resize', func);
             };
         }
     }, []);
