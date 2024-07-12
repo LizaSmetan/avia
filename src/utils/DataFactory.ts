@@ -1,6 +1,6 @@
 import { filterState } from '../constants/filters';
 import { flightTime } from './flightTime';
-import { segment, Ticket } from './Ticket';
+import { Segment, Ticket } from './Ticket';
 
 export const PER_PAGE = 5;
 class DataFactory {
@@ -37,7 +37,7 @@ class DataFactory {
                     } else {
                         const getTransfersNum = (ticket: Ticket) =>
                             ticket.way.reduce(
-                                (acc: number, segment: segment) => {
+                                (acc: number, segment: Segment) => {
                                     if (segment.transfers.length > acc) {
                                         return segment.transfers.length;
                                     }
@@ -83,6 +83,7 @@ class DataFactory {
         return copy.slice(0, perPage || PER_PAGE);
     }
     getCount() {
+        // Усього знайдено квитків
         return this.data.length;
     }
 }

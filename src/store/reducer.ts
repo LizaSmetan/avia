@@ -30,6 +30,7 @@ const initialState: state = {
 };
 
 const reducer = createReducer(initialState, (builder) => {
+    // ФІЛЬТР
     builder
         .addCase(toggleTransfersFilter, (state, action) => {
             if (state.filter.transfer.includes(action.payload)) {
@@ -91,6 +92,8 @@ const reducer = createReducer(initialState, (builder) => {
                 filter: newValue,
             };
         })
+        // ФІЛЬТР
+        // СОРТУВАННЯ
         .addCase(sort, (state, action) => {
             const newData = new DataFactory(arrayData)
                 .sort(action.payload)
@@ -104,6 +107,8 @@ const reducer = createReducer(initialState, (builder) => {
                 sort: action.payload,
             };
         })
+        // СОРТУВАННЯ
+        // ПОКАЗАТИ БІЛЬШЕ
         .addCase(showMore, (state) => {
             const newLength = state.tickets.data.length + PER_PAGE;
             const newData = new DataFactory(arrayData)
@@ -118,6 +123,7 @@ const reducer = createReducer(initialState, (builder) => {
                 },
             };
         });
+    // ПОКАЗАТИ БІЛЬШЕ
 });
 
 export default reducer;

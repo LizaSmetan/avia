@@ -1,5 +1,6 @@
 import React, { MouseEventHandler, ReactNode } from 'react';
 import './Button.scss';
+import clsx from 'clsx';
 
 type Props = {
     children?: ReactNode;
@@ -16,7 +17,7 @@ const Button: React.FC<Props> = ({
     return (
         <button
             onClick={onClick}
-            className={`button ${className} button--${type}`}
+            className={clsx('button', className, `button--${type}`)}
         >
             {children}
         </button>

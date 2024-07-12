@@ -1,6 +1,7 @@
 import React from 'react';
 import './Checkbox.scss';
 import { CheckIcon } from '../../assets/SvgSprite';
+import clsx from 'clsx';
 
 type CheckboxType = {
     isChecked: boolean;
@@ -9,7 +10,6 @@ type CheckboxType = {
     handler: () => void;
 };
 
-// TODO classnames
 const Checkbox = ({
     isChecked,
     title,
@@ -20,14 +20,22 @@ const Checkbox = ({
         <button
             onClick={() => handler()}
             onKeyDown={() => handler()}
-            className={`checkbox ${className}`}
+            className={clsx(`checkbox`, className)}
         >
             <div className="checkbox_content">
                 <div
-                    className={`checkbox_content__label ${isChecked ? 'checkbox_content__label--checked' : ''}`}
+                    className={clsx(
+                        'checkbox_content__label',
+                        isChecked ? 'checkbox_content__label--checked' : '',
+                    )}
                 >
                     <div
-                        className={`checkbox_content__label_icon ${isChecked ? 'checkbox_content__label_icon--checked' : ''}`}
+                        className={clsx(
+                            'checkbox_content__label_icon',
+                            isChecked
+                                ? 'checkbox_content__label_icon--checked'
+                                : '',
+                        )}
                     >
                         <CheckIcon />
                     </div>

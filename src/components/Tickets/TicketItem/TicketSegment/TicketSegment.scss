@@ -12,13 +12,13 @@
         line-height: 1.5rem;
 
         &__title{
-            color: #A0B0B9;
+            color: var(--grey-light-color);
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
         &__content{
-            color: #4A4A4A;
+            color: var(--grey-dark-color);
             font-size: 1.16rem;
         }
     }

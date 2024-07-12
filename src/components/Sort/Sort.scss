@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    border: 1px solid #DFE5EC;
+    border: 1px solid var(--grey-border-color);
     border-radius: 0.41rem;
     margin-bottom: 1.5rem;
 
@@ -12,24 +12,25 @@
         bottom: 0;
         transition: all .2s ease-in-out;
         z-index: -1;
-        background-color: #2196F3;
+        background-color: var(--main-color);
     }
 
     &__button{
         background: transparent;
-        color: #4A4A4A;
+        color: var(--grey-dark-color);
         transition: all .2s ease-in-out;
         border: none;
         display: flex;
         padding: 0;
         cursor: pointer;
+        outline: none;
 
         &:hover{
-            color: #A0B0B9;
+            color: var(--grey-light-color);
         }
 
         &--active{
-            color: white !important;
+            color: var(--white-color) !important;
         }
 
         &_inner{
@@ -49,8 +50,26 @@
                 z-index: -2;
                 width: 1px;
                 height: 100%;
-                background-color: #DFE5EC;
+                background-color: var(--grey-border-color);
             }
         }
+    }
+}
+
+.sort-desctop{
+    @media (width < 576px) {
+        display: none;
+    }
+}
+
+.sort-mobile{
+    @media (width >= 576px) {
+        display: none;
+    }
+
+    &__button{
+        position: absolute !important;
+        top: 5rem;
+        right: 2rem;
     }
 }

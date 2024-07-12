@@ -1,8 +1,9 @@
 import React from 'react';
 import './TicketItem.scss';
 import { LOGOS } from '../../../constants/companies';
-import { Ticket, segment } from '../../../utils/Ticket';
+import { Ticket, Segment } from '../../../utils/Ticket';
 import TicketSegment from './TicketSegment/TicketSegment';
+import clsx from 'clsx';
 
 type Props = { ticket: Ticket; index: number };
 
@@ -18,9 +19,16 @@ const TicketItem = (props: Props) => {
                 <div className="ticket-item__info_price">
                     {formattedNumber} {ticket.price.currency}
                 </div>
+                {/* Якщо зображення з прозорістю (png) - буде додано тінь */}
                 {company ? (
                     <div
-                        className={`ticket-item__info_logo ${company.logo.slice(-4) === '.png' || company.logo.startsWith('data:image/png;') ? 'ticket-item__info_logo--shadowed' : ''}`}
+                        className={clsx(
+                            'ticket-item__info_logo',
+                            company.logo.slice(-4) === '.png' ||
+                                company.logo.startsWith('data:image/png;')
+                                ? 'ticket-item__info_logo--shadowed'
+                                : '',
+                        )}
                     >
                         <a href="/">
                             <img src={company.logo} alt={ticket.company} />
@@ -29,7 +37,7 @@ const TicketItem = (props: Props) => {
                 ) : null}
             </div>
             <div className="ticket-item__segments">
-                {ticket.way.map((segment: segment, i) => {
+                {ticket.way.map((segment: Segment, i) => {
                     return (
                         <TicketSegment
                             key={`TicketWay_${ticket.id}_${index}_${i}`}

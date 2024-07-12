@@ -15,3 +15,20 @@
     }
 }
 
+.filter-desctop{
+    @include mobile {
+        display: none;
+    }
+}
+
+.filter-mobile{
+    @include desktop {
+        display: none;
+    }
+
+    &__button{
+        position: absolute !important;
+        top: 5rem;
+        left: 2rem;
+    }
+}

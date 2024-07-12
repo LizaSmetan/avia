@@ -1,9 +1,9 @@
 import React from 'react';
-import { segment, Ticket } from '../../../../utils/Ticket';
+import { Segment, Ticket } from '../../../../utils/Ticket';
 import { getSegmentData, Info } from './getSegmentData';
 import './TicketSegment.scss';
 
-type Props = { segment: segment; index: number; ticket: Ticket };
+type Props = { segment: Segment; index: number; ticket: Ticket };
 const TicketSegment = (props: Props) => {
     const { segment, index, ticket } = props;
 

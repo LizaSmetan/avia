@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { segment } from '../../../../utils/Ticket';
+import { Segment } from '../../../../utils/Ticket';
 import { declOfNumber } from '../../../../utils/declOfNumber';
 import { getMoments, segmentflightTime } from '../../../../utils/flightTime';
 
@@ -7,7 +7,7 @@ export type Info = {
     title: string;
     content: string;
 };
-export const getSegmentData = (segment: segment) => {
+export const getSegmentData = (segment: Segment) => {
     const duration = segmentflightTime(segment);
     const durations = [
         duration.days() && duration.days() + 'д',

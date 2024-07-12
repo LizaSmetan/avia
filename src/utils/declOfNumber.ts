@@ -1,3 +1,7 @@
+// Відмінює слова згідно кількості, наприклад
+// 1 пересадка
+// 2 пересадки
+// 5 пересадок
 export const declOfNumber = (n: number, text_forms: Array<string>) => {
     n = Math.abs(n) % 100;
     let n1 = n % 10;

@@ -19,7 +19,7 @@
             font-size: 2rem;
             font-weight: 600;
             padding-right: 1rem;
-            color: #2196F3;
+            color: var(--main-color);
         }
 
         &_logo{
@@ -33,7 +33,7 @@
 
             &--shadowed{
                 img{
-                    filter: drop-shadow(0 0.16rem 0.66rem rgb(0 0 0 / 10%));
+                    filter: drop-shadow(0 0.16rem 0.66rem var(--grey-shadow-color));
                     transition: all .2s linear;
                 }
             }
