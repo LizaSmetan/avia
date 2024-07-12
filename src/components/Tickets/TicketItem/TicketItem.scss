@@ -13,9 +13,38 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 1.25rem;
 
         &_price{
-            
+            font-size: 2rem;
+            font-weight: 600;
+            padding-right: 1rem;
+            color: #2196F3;
+        }
+
+        &_logo{
+            max-width: 9.91rem;
+            max-height: 3.41rem;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            &--shadowed{
+                img{
+                    filter: drop-shadow(0 0.16rem 0.66rem rgb(0 0 0 / 10%));
+                    transition: all .2s linear;
+                }
+            }
+
+            a:hover{
+                img{
+                    filter: drop-shadow(0 0.16rem 0.66rem rgba(0 0 0 / 20%));
+                    transform: translateY(-0.2rem);
+                    transition: all .2s linear;
+                }
+            }
         }
     }
 }

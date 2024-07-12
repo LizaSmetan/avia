@@ -1,0 +1,25 @@
+.segment-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+
+    &+.segment-row{
+        margin-top: 0.83rem;
+    }
+
+    &__item{
+        font-weight: 600;
+        line-height: 1.5rem;
+
+        &__title{
+            color: #A0B0B9;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        &__content{
+            color: #4A4A4A;
+            font-size: 1.16rem;
+        }
+    }
+}

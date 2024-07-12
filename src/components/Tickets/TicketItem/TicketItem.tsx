@@ -19,7 +19,9 @@ const TicketItem = (props: Props) => {
                     {formattedNumber} {ticket.price.currency}
                 </div>
                 {company ? (
-                    <div className="ticket-item__info_logo">
+                    <div
+                        className={`ticket-item__info_logo ${company.logo.slice(-4) === '.png' || company.logo.startsWith('data:image/png;') ? 'ticket-item__info_logo--shadowed' : ''}`}
+                    >
                         <a href="/">
                             <img src={company.logo} alt={ticket.company} />
                         </a>

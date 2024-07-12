@@ -1,6 +1,7 @@
 import React from 'react';
 import { segment, Ticket } from '../../../../utils/Ticket';
 import { getSegmentData, Info } from './getSegmentData';
+import './TicketSegment.scss';
 
 type Props = { segment: segment; index: number; ticket: Ticket };
 const TicketSegment = (props: Props) => {

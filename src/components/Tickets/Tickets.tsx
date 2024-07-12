@@ -4,6 +4,8 @@ import { AppDispatch, RootState } from '../../store/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { showMore } from '../../store/actions';
 import TicketItem from './TicketItem/TicketItem';
+import Button from '../../elements/Button/Button';
+import { PER_PAGE } from '../../utils/DataFactory';
 
 const Tickets: React.FC = () => {
     const { data, count } = useSelector((state: RootState) => state.tickets);
@@ -11,19 +13,28 @@ const Tickets: React.FC = () => {
 
     return (
         <div className="tickets">
-            {data.map((ticket, index) => {
-                return (
-                    <TicketItem
-                        ticket={ticket}
-                        index={index}
-                        key={`Tickets_${ticket.id}_${index}`}
-                    />
-                );
-            })}
+            {data.length ? (
+                data.map((ticket, index) => {
+                    return (
+                        <TicketItem
+                            ticket={ticket}
+                            index={index}
+                            key={`Tickets_${ticket.id}_${index}`}
+                        />
+                    );
+                })
+            ) : (
+                <div className="no-data">
+                    За вашим запитом нічого не знайдено
+                </div>
+            )}
             {count > data.length ? (
-                <button onClick={() => dispatch(showMore())}>
-                    показати ще
-                </button>
+                <Button
+                    className="show-more-button"
+                    onClick={() => dispatch(showMore())}
+                >
+                    Показати ще {PER_PAGE} квитків
+                </Button>
             ) : null}
         </div>
     );

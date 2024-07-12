@@ -9,9 +9,11 @@ export type Info = {
 };
 export const getSegmentData = (segment: segment) => {
     const duration = segmentflightTime(segment);
-    let hoursDiff = duration.hours();
-    let minutesDiff = duration.minutes();
-    let formattedTime = `${hoursDiff}г${minutesDiff ? ` ${minutesDiff}хв` : ''}`;
+    const durations = [
+        duration.days() && duration.days() + 'д',
+        duration.hours() && duration.hours() + 'г',
+        duration.minutes() && duration.minutes() + 'хв',
+    ];
 
     const { departure, arrival } = getMoments(segment);
 
@@ -23,11 +25,13 @@ export const getSegmentData = (segment: segment) => {
         },
         {
             title: 'В дорозі',
-            content: formattedTime,
+            content: durations.filter((d) => d).join(' '),
         },
         {
-            title: `${segment.transfers.length} ${declOfNumber(segment.transfers.length, ['пересадка', 'пересадки', 'пересадок'])}`,
-            content: segment.transfers.join(','),
+            title: segment.transfers.length
+                ? `${segment.transfers.length} ${declOfNumber(segment.transfers.length, ['пересадка', 'пересадки', 'пересадок'])}`
+                : 'Без пересадок',
+            content: segment.transfers.join(', ').toUpperCase(),
         },
     ];
 };

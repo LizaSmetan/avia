@@ -1,0 +1,25 @@
+.button{
+    font-size: 1rem;
+    line-height: 1.66;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 1.25rem;
+    border-radius: 0.41rem;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover{
+        transition: all .2s linear;
+    }
+
+    &--default{
+        background-color: #2196F3;
+        color: #FFF;
+
+        &:hover{
+            filter: brightness(0.9);
+        }
+    }
+}
