@@ -67,12 +67,10 @@ class DataFactory {
             switch (filterKey) {
                 case 'transfer':
                     const filterValues = filterValue[filterKey];
-                    this.data = copy.filter(
-                        (ticket: Ticket) =>
-                            !filterValues.length ||
-                            ticket.way.every((segment) =>
-                                filterValues.includes(segment.transfers.length),
-                            ),
+                    this.data = copy.filter((ticket: Ticket) =>
+                        ticket.way.every((segment) =>
+                            filterValues.includes(segment.transfers.length),
+                        ),
                     );
             }
         });

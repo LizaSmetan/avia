@@ -4,7 +4,8 @@ export const useFixedFilter = () => {
     const filterRef = useRef(null);
 
     useEffect(() => {
-        if (filterRef.current) {
+        const scrollContainer = document.getElementById('root');
+        if (filterRef.current && scrollContainer) {
             const element: HTMLDivElement = filterRef.current;
             const resetStyles = () => {
                 if (element) {
@@ -15,6 +16,7 @@ export const useFixedFilter = () => {
             };
 
             const func = () => {
+                const offset = 12;
                 if (filterRef?.current) {
                     const containerElem = element.parentElement;
                     if (containerElem) {
@@ -24,15 +26,15 @@ export const useFixedFilter = () => {
                         const { height, width } = values || {};
 
                         const top =
-                            containerElem.offsetTop - window?.scrollY ||
-                            values.top;
-                        if (top < 0 && height > elem.height) {
+                            containerElem.offsetTop -
+                                scrollContainer.scrollTop || values.top;
+                        if (top < offset && height > elem.height) {
                             element.style.position = 'fixed';
                             element.style.width = `${width}px`;
-                            if (0 + elem.height > top + height) {
+                            if (offset + elem.height > top + height) {
                                 element.style.top = `${top + height - elem.height}px`;
                             } else {
-                                element.style.top = `0`;
+                                element.style.top = `${offset}px`;
                             }
                         } else {
                             resetStyles();
@@ -42,10 +44,11 @@ export const useFixedFilter = () => {
             };
 
             func();
-            window.addEventListener('scroll', func);
+
+            scrollContainer.addEventListener('scroll', func);
             window.addEventListener('resize', func);
             return () => {
-                window.removeEventListener('scroll', func);
+                scrollContainer.removeEventListener('scroll', func);
                 window.removeEventListener('resize', func);
             };
         }

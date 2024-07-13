@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import './Dropdown.scss';
 import Checkbox from '../Checkbox/Checkbox';
 import clsx from 'clsx';
+import { useOutsideClick } from './useClickOutside';
 
 export type option = {
     title: string;
@@ -22,9 +23,13 @@ type Props = {
 const Dropdown = (props: Props) => {
     const { children, options, handler, className, multiple, align } = props;
     const [opened, setIsOpened] = useState(false);
+    const ref = useOutsideClick(() => {
+        setIsOpened(false);
+    });
+
     return (
         <>
-            <div className={clsx('dropdown', className)}>
+            <div ref={ref} className={clsx('dropdown', className)}>
                 <button
                     onClick={() => setIsOpened((pre) => !pre)}
                     className={clsx(
@@ -77,13 +82,6 @@ const Dropdown = (props: Props) => {
                     </div>
                 ) : null}
             </div>
-            {opened ? (
-                // Для кліка на порожню область
-                <button
-                    className="overlay"
-                    onClick={() => setIsOpened(false)}
-                />
-            ) : null}
         </>
     );
 };

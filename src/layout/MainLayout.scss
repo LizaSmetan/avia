@@ -24,6 +24,7 @@ $logo-offset-mobile: 2.16rem;
         a{
             position: relative;
             display: inline-block;
+            min-height: 5rem;
 
             &::before{
                 content: '';

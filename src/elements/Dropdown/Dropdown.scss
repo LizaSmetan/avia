@@ -1,14 +1,5 @@
 @use '../../assets/uikit' as *;
 
-@mixin active-button {
-    background: var(--main-color);
-    border: 1px solid var(--main-color);
-
-    svg{
-        fill: var(--white-color);
-    }
-}
-
 .dropdown{
     position: relative;
     z-index: 10;
@@ -26,19 +17,21 @@
         width: 3.8rem;
         height: 3.8rem;
         cursor: pointer;
+        z-index: 8;
 
         svg{
-            width: 1.5rem;
-            height: 1.5rem;
-            fill: var(--grey-dark-color);
+            width: 1.8rem;
+            height: 1.8rem;
+            fill: var(--grey-light-color);
         }
 
         &--opened{
-            @include active-button;
-        }
+            background: var(--main-color);
+            border: 1px solid var(--main-color);
 
-        &:hover {
-            @include active-button;
+            svg{
+                fill: var(--white-color);
+            }
         }
     }
 
@@ -47,6 +40,7 @@
         top: calc(100% + 1rem);
         left: 0;
         padding: 0.83rem 0;
+        z-index: 11;
 
         &::before{
             content: '';
@@ -92,17 +86,4 @@
             }
         }
     }
-}
-
-// Для кліка на порожню область
-.overlay{
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9;
-    display: block;
 }

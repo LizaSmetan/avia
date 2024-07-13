@@ -8,6 +8,7 @@ import {
 import { filterState, TRANSFERS } from '../constants/filters';
 import { Ticket } from '../utils/Ticket';
 import DataFactory, { PER_PAGE } from '../utils/DataFactory';
+import { calcBodyWidth } from '../utils/calcBodyWidth';
 const arrayData = require('../constants/data.json');
 
 type ticketsState = {
@@ -21,7 +22,7 @@ interface state {
 }
 
 const initialState: state = {
-    filter: { transfer: [] },
+    filter: { transfer: TRANSFERS.map(({ value }) => value) },
     sort: 'price',
     tickets: {
         data: new DataFactory(arrayData).sort('price').getData(PER_PAGE),
