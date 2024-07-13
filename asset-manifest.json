@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/avia/static/css/main.c995fe42.css",
-    "main.js": "/avia/static/js/main.a308ba43.js",
+    "main.js": "/avia/static/js/main.e458b530.js",
     "static/js/453.be24fa5c.chunk.js": "/avia/static/js/453.be24fa5c.chunk.js",
     "static/media/Logo.svg": "/avia/static/media/Logo.40ccb0dd4ef06d99da51ba945b3ea604.svg",
     "index.html": "/avia/index.html",
     "main.c995fe42.css.map": "/avia/static/css/main.c995fe42.css.map",
-    "main.a308ba43.js.map": "/avia/static/js/main.a308ba43.js.map",
+    "main.e458b530.js.map": "/avia/static/js/main.e458b530.js.map",
     "453.be24fa5c.chunk.js.map": "/avia/static/js/453.be24fa5c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c995fe42.css",
-    "static/js/main.a308ba43.js"
+    "static/js/main.e458b530.js"
   ]
 }
