@@ -17,12 +17,6 @@ html {
     font-size: 12px;
 }
 
-#root {
-    position: relative;
-    height: 100vh;
-    overflow: auto;
-}
-
 /* 
 @media screen and (width >= 1200px) {
     html {
@@ -62,6 +56,12 @@ label {
 }
 
 @media screen and (width >= 768px) {
+    #root {
+        position: relative;
+        height: 100vh;
+        overflow: auto;
+    }
+
     ::-webkit-scrollbar {
         width: 8px;
         height: 3px;

@@ -19,7 +19,7 @@ export const useFixedFilter = () => {
                 const offset = 12;
                 if (filterRef?.current) {
                     const containerElem = element.parentElement;
-                    if (containerElem) {
+                    if (containerElem && window.innerWidth >= 768) {
                         const values = containerElem?.getBoundingClientRect();
 
                         const elem = element.getBoundingClientRect();
