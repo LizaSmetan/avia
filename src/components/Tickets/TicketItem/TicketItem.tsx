@@ -30,7 +30,7 @@ const TicketItem = (props: Props) => {
                                 : '',
                         )}
                     >
-                        <a href="/">
+                        <a href={process.env.PUBLIC_URL}>
                             <img src={company.logo} alt={ticket.company} />
                         </a>
                     </div>

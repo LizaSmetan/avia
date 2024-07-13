@@ -9,7 +9,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     return (
         <div className="layout">
             <div className="layout__logo">
-                <a href="/">
+                <a href={process.env.PUBLIC_URL}>
                     <img src={Logo} alt="logo" />
                 </a>
             </div>

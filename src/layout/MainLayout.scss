@@ -1,12 +1,25 @@
+@use '../assets/uikit' as *;
+
+$logo-offset: 4.16rem;
+$logo-offset-mobile: 2.16rem;
+
 .layout {
-    padding: 4.16rem 1rem;
+    padding: $logo-offset 1rem;
     max-width: calc(64.5rem + 2rem);
     width: 100%;
     margin: 0 auto;
 
+    @include mobile {
+        padding: $logo-offset-mobile 0.7rem;
+    }
+
     &__logo{
-        margin-bottom: 4.16rem;
+        margin-bottom: $logo-offset;
         text-align: center;
+
+        @include mobile {
+            margin-bottom: $logo-offset-mobile;
+        }
 
         a{
             position: relative;

@@ -46,7 +46,9 @@ const Dropdown = (props: Props) => {
                             if (multiple) {
                                 return (
                                     <Checkbox
-                                        className="dropdown__menu__option"
+                                        className={clsx(
+                                            'dropdown__menu__option',
+                                        )}
                                         key={`options_Checkbox_${title}`}
                                         isChecked={Boolean(option.isChecked)}
                                         title={title}

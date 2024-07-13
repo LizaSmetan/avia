@@ -1,5 +1,14 @@
 @use '../../assets/uikit' as *;
 
+@mixin active-button {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+
+    svg{
+        fill: var(--white-color);
+    }
+}
+
 .dropdown{
     position: relative;
     z-index: 10;
@@ -14,32 +23,49 @@
         justify-content: center;
         border: 1px solid var(--grey-border-color);
         border-radius: 0.6rem;
-        width: 3rem;
-        height: 3rem;
+        width: 3.8rem;
+        height: 3.8rem;
+        cursor: pointer;
 
         svg{
+            width: 1.5rem;
+            height: 1.5rem;
             fill: var(--grey-dark-color);
         }
 
         &--opened{
-            background: var(--main-color);
-            border: 1px solid var(--main-color);
+            @include active-button;
+        }
 
-            svg{
-                fill: var(--white-color);
-            }
+        &:hover {
+            @include active-button;
         }
     }
 
     &__menu{
         position: absolute;
-        top: 100%;
+        top: calc(100% + 1rem);
         left: 0;
-        padding: 1.2rem 1rem;
+        padding: 0.83rem 0;
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: -1.8rem;
+            left: 1.2rem;
+            border: 0.8rem solid transparent;
+            border-bottom: 1rem solid var(--white-color);
+        }
 
         &--left{
             right: 0;
             left: auto;
+
+            &::before{
+                right: 1.2rem;
+                left: auto;
+            }
         }
 
         @include panel;
@@ -50,20 +76,19 @@
             width: 100%;
             white-space: nowrap;
             background: transparent;
-            padding: 0;
             margin: 0;
             outline: none;
             text-align: left;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             color: var(--grey-dark-color);
-            font-size: 1.08rem;
+            font-size: 1.3rem;
+            padding: 0.83rem 1.66rem;
+            cursor: pointer;
 
-            &+&{
-                margin-top: 1rem;
-            }
 
+            &:hover,
             &--active{
-                color: var(--main-color);
+                background-color: #F1FCFF;
             }
         }
     }

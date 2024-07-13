@@ -21,7 +21,7 @@ const Filter: React.FC = () => {
     const values = useSelector((state: RootState) => state.filter.transfer);
 
     const options = useMemo(() => {
-        return [{ value: -1, title: 'Все' }, ...TRANSFERS].map((option) => {
+        return [{ value: -1, title: 'Всі' }, ...TRANSFERS].map((option) => {
             return {
                 ...option,
                 isChecked:
