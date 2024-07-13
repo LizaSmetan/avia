@@ -15,16 +15,13 @@ export const CheckIcon: React.FC = (props: SvgProps = {}) => (
     </svg>
 );
 export const FilterIcon: React.FC = (props: SvgProps = {}) => (
-    <svg width="1rem" height="1rem" viewBox="0 0 32 32" {...props}>
-        <path d="M14 4v-0.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18zM8 8v-4h4v4h-4zM26 13.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-18v4h18v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h6v-4h-6v-0.5zM20 18v-4h4v4h-4zM14 23.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18v-0.5zM8 28v-4h4v4h-4z"></path>
+    <svg width="1rem" height="1rem" viewBox="0 -960 960 960" {...props}>
+        <path d="M200-160v-280h-80v-80h240v80h-80v280h-80Zm0-440v-200h80v200h-80Zm160 0v-80h80v-120h80v120h80v80H360Zm80 440v-360h80v360h-80Zm240 0v-120h-80v-80h240v80h-80v120h-80Zm0-280v-360h80v360h-80Z" />
     </svg>
 );
 export const SortIcon: React.FC = (props: SvgProps = {}) => (
-    <svg width="1rem" height="1rem" viewBox="0 0 32 32" {...props}>
-        <path d="M10 24v-24h-4v24h-5l7 7 7-7h-5z"></path>
-        <path d="M14 18h18v4h-18v-4z"></path>
-        <path d="M14 12h14v4h-14v-4z"></path>
-        <path d="M14 6h10v4h-10v-4z"></path>
-        <path d="M14 0h6v4h-6v-4z"></path>
+    <svg width="1rem" height="1rem" viewBox="0 0 24 24" {...props}>
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" />
     </svg>
 );
