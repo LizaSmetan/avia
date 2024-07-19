@@ -6,8 +6,8 @@ export interface Transfer {
 export const TRANSFERS: Array<Transfer> = [
     { value: 0, title: 'Без пересадок' },
     { value: 1, title: '1 пересадка' },
-    { value: 2, title: '2 пересадка' },
-    { value: 3, title: '3 пересадка' },
+    { value: 2, title: '2 пересадки' },
+    { value: 3, title: '3 пересадки' },
 ];
 
 type filter = {
